@@ -20,6 +20,11 @@ const columns: GridColDef<Door>[] = [
     flex: 1,
   },
   {
+    field: 'apartmentName',
+    headerName: 'Apartment',
+    flex: 1,
+  },
+  {
     field: 'connectionType',
     headerName: 'Connection type',
     flex: 1,
@@ -30,7 +35,15 @@ const columns: GridColDef<Door>[] = [
     flex: 1,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     renderCell: ({ row: door }) => {
-      return <Typography color="success.main">online</Typography>;
+      return (
+        <Typography
+          color={
+            door.connectionStatus === 'online' ? 'success.main' : 'error.main'
+          }
+        >
+          {door.connectionStatus}
+        </Typography>
+      );
     },
   },
 ];
@@ -47,6 +60,7 @@ export function DoorList({ doors }: DoorListProps) {
     },
     [router],
   );
+  console.log({ doors });
 
   return (
     <DataGrid

@@ -12,6 +12,13 @@ const doors: Door[] = [
     connectionType: 'wired',
     connectionStatus: 'offline',
   },
+  {
+    id: '63f637c9f3c48a124616044c',
+    name: 'Building BAck Entrance',
+    buildingName: 'Bahnhofstrasse 10A',
+    connectionType: 'wired',
+    connectionStatus: 'online',
+  },
 ];
 
 describe('DoorList', () => {

@@ -25,7 +25,6 @@ export const getLocaleString = (
   format: DateTimeFormatOptions = DateTime.DATETIME_SHORT,
 ): string | undefined => {
   const dateTime = getDateTimeByJSDateOrISO(date);
-
   if (dateTime?.isValid) {
     return dateTime.toLocaleString(format);
   }
