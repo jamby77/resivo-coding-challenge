@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppBarLogo should render correctly 1`] = `
+<div
+  class="MuiBox-root css-8eu3pw"
+>
+  <a
+    href="/"
+  >
+    <img
+      alt="dormakaba logo"
+      data-nimg="1"
+      decoding="async"
+      height="30"
+      loading="lazy"
+      src="/_next/image?url=%2Flogo.png&w=640&q=75"
+      srcset="/_next/image?url=%2Flogo.png&w=384&q=75 1x, /_next/image?url=%2Flogo.png&w=640&q=75 2x"
+      style="color: transparent;"
+      width="269"
+    />
+  </a>
+</div>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MDScreenMenu should render correctly 1`] = `
+<ul
+  class="MuiList-root MuiList-padding css-hmqy6w-MuiList-root"
+>
+  <a
+    class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-72rlw3-MuiButtonBase-root-MuiListItemButton-root"
+    href="/doors"
+    tabindex="0"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    >
+      Doors
+    </p>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </a>
+</ul>
+`;

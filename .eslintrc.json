@@ -1,0 +1,74 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:testing-library/react"
+  ],
+  "rules": {
+    "no-console": "error",
+    "no-alert": "error",
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "zones": [
+          {
+            "target": ["src/server", "src/pages/api"],
+            "from": "src/ui",
+            "message": "don't import ui specific resources inside the bff layer"
+          },
+          {
+            "target": "src/server/repositories",
+            "from": ["src/server/useCases", "src/server/mappers"],
+            "message": "don't import bff use case and mapper resources inside repositories folder"
+          },
+          {
+            "target": "src/ui",
+            "from": ["src/server", "src/pages"],
+            "message": "don't import bff and page resources inside the ui layer"
+          },
+          {
+            "target": "src/models",
+            "from": "src/",
+            "except": ["lib/", "models/"],
+            "message": "don't import any other resources than 3rd party libraries inside the models layer"
+          }
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "files": ["**/*.ts", "**/*.tsx"],
+      "plugins": ["@typescript-eslint"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": ["tsconfig.json"]
+      },
+      "rules": {
+        "@typescript-eslint/no-implied-eval": "error",
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/no-unnecessary-type-assertion": "error",
+        "no-unused-expressions": "off",
+        "@typescript-eslint/no-unused-expressions": "warn",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "args": "after-used",
+            "ignoreRestSiblings": true
+          }
+        ],
+        "@typescript-eslint/prefer-return-this-type": "error",
+        "@typescript-eslint/switch-exhaustiveness-check": "error",
+        "testing-library/no-node-access": [
+          "error",
+          {
+            "allowContainerFirstChild": true
+          }
+        ]
+      }
+    }
+  ]
+}

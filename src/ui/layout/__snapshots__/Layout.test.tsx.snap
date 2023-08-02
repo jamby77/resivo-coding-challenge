@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render correctly 1`] = `
+<header
+  class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-regular css-r6ewbb-MuiToolbar-root"
+    >
+      <div
+        class="MuiBox-root css-8eu3pw"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="dormakaba logo"
+            data-nimg="1"
+            decoding="async"
+            height="30"
+            loading="lazy"
+            src="/_next/image?url=%2Flogo.png&w=640&q=75"
+            srcset="/_next/image?url=%2Flogo.png&w=384&q=75 1x, /_next/image?url=%2Flogo.png&w=640&q=75 2x"
+            style="color: transparent;"
+            width="269"
+          />
+        </a>
+      </div>
+      <div
+        class="MuiBox-root css-1lvtzne"
+      >
+        <button
+          aria-controls="menu-appbar"
+          aria-haspopup="true"
+          aria-label="menu button"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-mf1cb5-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="MenuIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <ul
+        class="MuiList-root MuiList-padding css-hmqy6w-MuiList-root"
+      >
+        <a
+          class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-72rlw3-MuiButtonBase-root-MuiListItemButton-root"
+          href="/doors"
+          tabindex="0"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+          >
+            Doors
+          </p>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+      </ul>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-p1x2na-MuiTypography-root"
+      >
+        2/12/2023
+      </p>
+    </div>
+  </div>
+</header>
+`;

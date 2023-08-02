@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBarMenuItem should render correctly 1`] = `
+<a
+  class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root"
+  href="/test"
+  role="menuitem"
+  tabindex="-1"
+>
+  <p
+    class="MuiTypography-root MuiTypography-body1 css-1uwgr7b-MuiTypography-root"
+  >
+    Test
+  </p>
+  <span
+    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+  />
+</a>
+`;

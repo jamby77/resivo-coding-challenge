@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailPageContainer should render correctly 1`] = `
+<div
+  class="css-1p5q5e5-MuiStack-root"
+>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    >
+      <strong>
+        test
+      </strong>
+    </p>
+    <div>
+      Hello World!
+    </div>
+  </div>
+</div>
+`;

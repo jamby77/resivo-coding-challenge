@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppBarDate should render correctly 1`] = `
+<p
+  class="MuiTypography-root MuiTypography-body1 css-p1x2na-MuiTypography-root"
+>
+  2/12/2023
+</p>
+`;
