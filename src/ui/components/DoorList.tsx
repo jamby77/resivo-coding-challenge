@@ -60,7 +60,6 @@ export function DoorList({ doors }: DoorListProps) {
     },
     [router],
   );
-  console.log({ doors });
 
   return (
     <DataGrid

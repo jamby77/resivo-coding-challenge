@@ -12,7 +12,6 @@ export const apiSlice = createApi({
         method: 'GET',
       }),
       providesTags: (response) => {
-        console.log({ doors: response });
         return Array.isArray(response)
           ? response.map(({ id }) => ({
               type: 'doors',
