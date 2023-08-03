@@ -2,9 +2,9 @@
 
 exports[`DoorList should render correctly 1`] = `
 <div
-  aria-colcount="4"
+  aria-colcount="6"
   aria-multiselectable="false"
-  aria-rowcount="3"
+  aria-rowcount="2"
   class="MuiDataGrid-root MuiDataGrid-autoHeight MuiDataGrid-root--densityStandard css-1e2bxag-MuiDataGrid-root"
   role="grid"
 >
@@ -234,10 +234,10 @@ exports[`DoorList should render correctly 1`] = `
           </div>
           <div
             aria-colindex="3"
-            aria-label="Connection type"
+            aria-label="Apartment"
             aria-sort="none"
             class="MuiDataGrid-columnHeader MuiDataGrid-columnHeader--sortable"
-            data-field="connectionType"
+            data-field="apartmentName"
             role="columnheader"
             style="height: 56px; width: 0px; min-width: 0; max-width: 0;"
             tabindex="-1"
@@ -257,7 +257,7 @@ exports[`DoorList should render correctly 1`] = `
                     class="MuiDataGrid-columnHeaderTitle css-1jbbcbn-MuiDataGrid-columnHeaderTitle"
                     data-mui-internal-clone-element="true"
                   >
-                    Connection type
+                    Apartment
                   </div>
                 </div>
                 <div
@@ -346,7 +346,7 @@ exports[`DoorList should render correctly 1`] = `
       >
         <div
           class="MuiDataGrid-virtualScrollerContent css-1kwdphh-MuiDataGrid-virtualScrollerContent"
-          style="width: auto; height: 104px; min-height: auto;"
+          style="width: auto; height: 52px; min-height: auto;"
         >
           <div
             class="MuiDataGrid-virtualScrollerRenderZone css-s1v7zr-MuiDataGrid-virtualScrollerRenderZone"
@@ -355,7 +355,7 @@ exports[`DoorList should render correctly 1`] = `
             <div
               aria-rowindex="2"
               aria-selected="false"
-              class="MuiDataGrid-row"
+              class="MuiDataGrid-row MuiDataGrid-row--lastVisible"
               data-id="63f637c9f3c48a124616044b"
               data-rowindex="0"
               role="row"
@@ -400,77 +400,16 @@ exports[`DoorList should render correctly 1`] = `
                 aria-colspan="1"
                 class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
                 data-colindex="2"
-                data-field="connectionType"
+                data-field="apartmentName"
                 role="cell"
                 style="min-width: 0; max-width: 0; min-height: 52px; max-height: 52px;"
                 tabindex="-1"
               >
                 <div
                   class="MuiDataGrid-cellContent"
-                  title="wired"
+                  title="n/a"
                 >
-                  wired
-                </div>
-              </div>
-            </div>
-            <div
-              aria-rowindex="3"
-              aria-selected="false"
-              class="MuiDataGrid-row MuiDataGrid-row--lastVisible"
-              data-id="63f637c9f3c48a124616044c"
-              data-rowindex="1"
-              role="row"
-              style="max-height: 52px; min-height: 52px;"
-            >
-              <div
-                aria-colindex="1"
-                aria-colspan="1"
-                class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
-                data-colindex="0"
-                data-field="name"
-                role="cell"
-                style="min-width: 0; max-width: 0; min-height: 52px; max-height: 52px;"
-                tabindex="-1"
-              >
-                <div
-                  class="MuiDataGrid-cellContent"
-                  title="Building BAck Entrance"
-                >
-                  Building BAck Entrance
-                </div>
-              </div>
-              <div
-                aria-colindex="2"
-                aria-colspan="1"
-                class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
-                data-colindex="1"
-                data-field="buildingName"
-                role="cell"
-                style="min-width: 0; max-width: 0; min-height: 52px; max-height: 52px;"
-                tabindex="-1"
-              >
-                <div
-                  class="MuiDataGrid-cellContent"
-                  title="Bahnhofstrasse 10A"
-                >
-                  Bahnhofstrasse 10A
-                </div>
-              </div>
-              <div
-                aria-colindex="3"
-                aria-colspan="1"
-                class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
-                data-colindex="2"
-                data-field="connectionType"
-                role="cell"
-                style="min-width: 0; max-width: 0; min-height: 52px; max-height: 52px;"
-                tabindex="-1"
-              >
-                <div
-                  class="MuiDataGrid-cellContent"
-                  title="wired"
-                >
-                  wired
+                  n/a
                 </div>
               </div>
             </div>

@@ -5,6 +5,8 @@ import { UseCase } from '@/server/lib/UseCase';
 import { DoorRepository } from '@/server/repositories/DoorRepository';
 import { BuildingRepository } from '@/server/repositories/BuildingRepository';
 import { DoorMapper } from '@/server/mappers/DoorMapper';
+import { ApartmentRepository } from '@/server/repositories/ApartmentRepository';
+import { ApartmentDto } from '@/__mocks__/dtos/ApartmentDto';
 
 interface Context {
   doorId: string;
@@ -15,6 +17,7 @@ export class GetDoorByIdUseCase implements UseCase<Door, Context> {
   constructor(
     private doorRepository: DoorRepository,
     private buildingRepository: BuildingRepository,
+    private apartmentRepository: ApartmentRepository,
     private doorMapper: DoorMapper,
   ) {}
 
@@ -34,9 +37,22 @@ export class GetDoorByIdUseCase implements UseCase<Door, Context> {
         `no building found for id ${doorDto.building_id}`,
       );
     }
+    const apartmentDtosById: Record<string, ApartmentDto> = {};
+    if (doorDto.apartment_id) {
+      const apartmentDto = await this.apartmentRepository.getApartmentById(
+        doorDto.apartment_id,
+      );
+      if (apartmentDto) {
+        apartmentDtosById[apartmentDto.id] = apartmentDto;
+      }
+    }
 
-    return this.doorMapper.toDomain(doorDto, {
-      [buildingDto?.id]: buildingDto,
-    });
+    return this.doorMapper.toDomain(
+      doorDto,
+      {
+        [buildingDto?.id]: buildingDto,
+      },
+      apartmentDtosById,
+    );
   }
 }

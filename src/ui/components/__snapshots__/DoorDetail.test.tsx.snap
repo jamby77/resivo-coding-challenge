@@ -43,6 +43,20 @@ exports[`DoorDetail should render correctly 1`] = `
       class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
     >
       <strong>
+        Apartment
+      </strong>
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    />
+  </div>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    >
+      <strong>
         Connection type
       </strong>
     </p>
@@ -63,10 +77,24 @@ exports[`DoorDetail should render correctly 1`] = `
       </strong>
     </p>
     <p
-      class="MuiTypography-root MuiTypography-body1 css-18todbp-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1nkhxq8-MuiTypography-root"
     >
-      online
+      offline
     </p>
+  </div>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    >
+      <strong>
+        Last connection status update
+      </strong>
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    />
   </div>
 </div>
 `;

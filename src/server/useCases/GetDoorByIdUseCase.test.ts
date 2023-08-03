@@ -5,6 +5,8 @@ import { DoorDto } from '@/__mocks__/dtos/DoorDto';
 import { DoorRepository } from '@/server/repositories/DoorRepository';
 import { BuildingRepository } from '@/server/repositories/BuildingRepository';
 import { GetDoorByIdUseCase } from './GetDoorByIdUseCase';
+import { ApartmentDto } from '@/__mocks__/dtos/ApartmentDto';
+import { ApartmentRepository } from '@/server/repositories/ApartmentRepository';
 
 const buildingDto: BuildingDto = {
   id: '63f4e0797e85310fee059022',
@@ -21,6 +23,21 @@ const doorDto: DoorDto = {
   connection_status: 'online',
   last_connection_status_update: '2023-02-22T22:01:47.573Z',
   building_id: buildingDto.id,
+};
+const apartmentDto: ApartmentDto = {
+  id: '63f4e2825abc011556da74af',
+  name: 'Apartment 1.1',
+  floor: 1,
+  building_id: buildingDto.id,
+};
+const doorOfApartmentDto: DoorDto = {
+  id: '63f4d82ef04826419cc6eaec',
+  name: 'Apartment Main Entrance',
+  connection_type: 'wired',
+  connection_status: 'online',
+  last_connection_status_update: '2023-02-22T22:01:47.573Z',
+  building_id: buildingDto.id,
+  apartment_id: apartmentDto.id,
 };
 
 describe('GetDoorByIdUseCase', () => {
@@ -86,5 +103,28 @@ describe('GetDoorByIdUseCase', () => {
     expect(getBuildingByIdSpy).toHaveBeenNthCalledWith(1, buildingDto.id);
 
     expect.assertions(3);
+  });
+  it('should show apartment name', async () => {
+    const getApartmentDoorByIdSpy = jest
+      .spyOn(DoorRepository.prototype, 'getDoorById')
+      .mockImplementation(() => Promise.resolve(doorOfApartmentDto));
+    const getBuildingByIdSpy = jest
+      .spyOn(BuildingRepository.prototype, 'getBuildingById')
+      .mockImplementation(() => Promise.resolve(buildingDto));
+    const getApartmentByIdSpy = jest
+      .spyOn(ApartmentRepository.prototype, 'getApartmentById')
+      .mockImplementation(() => Promise.resolve(apartmentDto));
+
+    const door = await getDoorByIdUseCase.execute({
+      doorId: doorOfApartmentDto.id,
+    });
+    expect(getApartmentDoorByIdSpy).toHaveBeenNthCalledWith(
+      1,
+      doorOfApartmentDto.id,
+    );
+    expect(getBuildingByIdSpy).toHaveBeenNthCalledWith(1, buildingDto.id);
+
+    expect(getApartmentByIdSpy).toHaveBeenNthCalledWith(1, apartmentDto.id);
+    expect(door.apartmentName).toEqual('Apartment 1.1');
   });
 });

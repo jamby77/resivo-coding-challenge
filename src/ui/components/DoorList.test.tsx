@@ -11,13 +11,8 @@ const doors: Door[] = [
     buildingName: 'Bahnhofstrasse 10A',
     connectionType: 'wired',
     connectionStatus: 'offline',
-  },
-  {
-    id: '63f637c9f3c48a124616044c',
-    name: 'Building BAck Entrance',
-    buildingName: 'Bahnhofstrasse 10A',
-    connectionType: 'wired',
-    connectionStatus: 'online',
+    apartmentName: 'n/a',
+    lastConnectionStatusUpdate: '2022-01-01T00:00:00.000Z',
   },
 ];
 

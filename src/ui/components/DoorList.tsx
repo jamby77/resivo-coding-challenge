@@ -3,6 +3,7 @@ import { useCallback } from 'react';
 import { Door } from '@/models/Door';
 import { DataGrid, GridColDef, GridRowParams } from '@mui/x-data-grid';
 import Typography from '@mui/material/Typography';
+import { getLocaleString } from '@/lib/dateTime';
 
 interface DoorListProps {
   doors: Door[];
@@ -33,7 +34,6 @@ const columns: GridColDef<Door>[] = [
     field: 'connectionStatus',
     headerName: 'Connection status',
     flex: 1,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     renderCell: ({ row: door }) => {
       return (
         <Typography
@@ -42,6 +42,18 @@ const columns: GridColDef<Door>[] = [
           }
         >
           {door.connectionStatus}
+        </Typography>
+      );
+    },
+  },
+  {
+    field: 'lastConnectionStatusUpdate',
+    headerName: 'Last Connection status Update',
+    flex: 1,
+    renderCell: ({ row: door }) => {
+      return (
+        <Typography>
+          {getLocaleString(door.lastConnectionStatusUpdate)}
         </Typography>
       );
     },
