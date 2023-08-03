@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Door } from '@/models/Door';
 import { DoorList } from './DoorList';
 
@@ -20,5 +20,10 @@ describe('DoorList', () => {
   it('should render correctly', () => {
     const { container } = render(<DoorList doors={doors} />);
     expect(container.firstChild).toMatchSnapshot();
+  });
+  it('should render apartment column', () => {
+    render(<DoorList doors={doors} />);
+    screen.getByText('Apartment');
+    screen.getByText('n/a');
   });
 });
